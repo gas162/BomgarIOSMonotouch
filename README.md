@@ -1,4 +1,4 @@
-# BomgarIOSMonotouch
+# Bomgar IOS Monotouch
 Bomgar IOS Monotouch Xamarin Binging project
 
 
