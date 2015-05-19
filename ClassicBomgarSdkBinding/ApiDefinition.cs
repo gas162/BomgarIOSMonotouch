@@ -38,15 +38,15 @@ namespace ClassicBomgarSdkBinding
 
         // -(id)initWithCompanyId:(NSString *)companyId siteAddress:(NSString *)siteAddress port:(NSUInteger)port;
         [Export ("initWithCompanyId:siteAddress:port:")]
-        IntPtr Constructor (string companyId, string siteAddress, uint port);
+        IntPtr Constructor (string companyId, string siteAddress, int port);
 
         // -(void)startWithSessionKey:(NSString *)sessionKey sessionName:(NSString *)sessionName features:(SessionFeatures)features;
         [Export ("startWithSessionKey:sessionName:features:")]
-        void StartWithSessionKey (string sessionKey, string sessionName, uint features);
+        void StartWithSessionKey (string sessionKey, string sessionName, int features);
 
         // -(void)startWithIssue:(NSString *)issueCodeName sessionName:(NSString *)sessionName features:(SessionFeatures)features;
         [Export ("startWithIssue:sessionName:features:")]
-        void StartWithIssue (string issueCodeName, string sessionName, uint features);
+        void StartWithIssue (string issueCodeName, string sessionName, int features);
 
         // -(void)defineSystemInfoCategory:(NSString *)categoryName withType:(SystemInfoCategoryType)categoryType;
         [Export ("defineSystemInfoCategory:withType:")]
@@ -62,11 +62,11 @@ namespace ClassicBomgarSdkBinding
 
         // -(void)sendResponse:(NSUInteger)buttonIndex forPrompt:(NSUInteger)promptId;
         [Export ("sendResponse:forPrompt:")]
-        void SendResponse (uint buttonIndex, uint promptId);
+        void SendResponse (int buttonIndex, int promptId);
 
         // -(void)sendTimeoutForPrompt:(NSUInteger)promptId;
         [Export ("sendTimeoutForPrompt:")]
-        void SendTimeoutForPrompt (uint promptId);
+        void SendTimeoutForPrompt (int promptId);
 
         // -(void)endSession;
         [Export ("endSession")]
@@ -112,7 +112,7 @@ namespace ClassicBomgarSdkBinding
 
         // @optional -(void)showPromptWithId:(NSUInteger)promptId message:(NSString *)message timeout:(NSTimeInterval)timeout buttonTitles:(NSArray *)buttonTitles;
         [Export ("showPromptWithId:message:timeout:buttonTitles:")]
-        void ShowPromptWithId (uint promptId, string message, double timeout, NSObject[] buttonTitles);
+        void ShowPromptWithId (int promptId, string message, double timeout, NSObject[] buttonTitles);
 
         // @optional -(void)repPresenceChanged:(BOOL)inSession;
         [Export ("repPresenceChanged:")]

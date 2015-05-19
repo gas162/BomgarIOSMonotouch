@@ -3,7 +3,7 @@ using ObjCRuntime;
 
 namespace BomgarSdkBinding
 {
-    public enum SessionFeature : uint
+    public enum SessionFeature
     {
         ScreenSharing = (1 << 0),
         ScreenSharingWithControl = (1 << 1),
@@ -12,16 +12,15 @@ namespace BomgarSdkBinding
         SystemInfoNoDefault = (1 << 4),
         Clipboard = (1 << 5)
     }
-
-    [Native]
-    public enum SystemInfoCategoryType : ulong
+            
+    public enum SystemInfoCategoryType 
     {
         List = 0,
         Table,
         Text
     }
 
-    public enum BomgarSessionErrorType : uint
+    public enum BomgarSessionErrorType
     {
         KeyError = 0,
         IssueError,
